@@ -278,8 +278,13 @@ configure(allprojects) { project ->
 			cacheChangingModulesFor 0, "seconds"
 		}
 		repositories {
+			mavenLocal()    //使用本地maven仓库
+			maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
 			mavenCentral()
 			maven { url "https://repo.spring.io/libs-spring-framework-build" }
+			maven {
+				url "https://plugins.gradle.org/m2/"
+			}
 		}
 	}
 	configurations.all {
