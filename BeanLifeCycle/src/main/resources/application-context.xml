@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person" class="org.feixiang.Person" scope="singleton"
+		  init-method="myInit" destroy-method="myDestory">
+		<property name="name" value="张三"></property>
+		<property name="sex" value="男"></property>
+	</bean>
+
+	<bean class="org.feixiang.MyBeanFactoryPostProcessor"></bean>
+	<bean class="org.feixiang.MyBeanPostProcessor" ></bean>
+	<bean class="org.feixiang.MyInstantiationAwareBeanPostProcessor"></bean>
+
+</beans>
