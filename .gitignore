@@ -46,3 +46,4 @@ atlassian-ide-plugin.xml
 .vscode/
 /my-test/build/
 /BeanLifeCycle/build
+/my-threeCaches/build
