@@ -15,7 +15,8 @@ public class MyApplication {
 	public static void main(String[] args){
 		System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "d:\\test");
 		AnnotationConfigApplicationContext applicationContext=new AnnotationConfigApplicationContext(MyApplication.class);
-		UserServiceImpl userService= (UserServiceImpl) applicationContext.getBean("userServiceImpl");
+		UserService userService= (UserService) applicationContext.getBean("userServiceImpl");
+		//UserServiceImpl 继承 UserService 接口 用的jdk 动态代理，如果不继承，是用的 CGLib的代理
 		System.out.println(userService.getName(1));
 	}
 }
